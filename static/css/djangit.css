@@ -1,4 +1,4 @@
-p, h1, h2 li, div, select, input, textarea {
+html {
 	font-family: 'Georgia';
 }
 
@@ -17,7 +17,6 @@ header {
 }
 
 header .logo {
-	font-family: 'Verdana';
 	font-size: 3.5em;
 	height: 52px;
 	padding-top: 28px;

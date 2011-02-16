@@ -1,0 +1,38 @@
+# Example Django settings for djangit project.
+
+DEBUG=True
+
+ADMINS = (
+    ('Your Name', 'your_email@example.com'),
+)
+MANAGERS = ADMINS
+
+# Local time zone for this installation. Choices can be found here:
+# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
+# although not all choices may be available on all operating systems.
+# On Unix systems, a value of None will cause Django to use the same
+# timezone as the operating system.
+# If running in a Windows environment this must be set to the same as your
+# system time zone.
+TIME_ZONE = 'America/Chicago'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'DB_ENGINE',
+        'NAME': 'DB_NAME',
+        'USER': 'DB_USER',
+        'PASSWORD': 'DB_PASS',
+        'HOST': 'DB_HOST',
+        'PORT': ''
+    }
+}
+
+MEDIA_ROOT = '/path/to/media/root'
+MEDIA_URL = '/media/url/'
+
+STATIC_URL = '/path/to/django/static/files/'
+SECRET_KEY = 'YOUR_SECRET_KEY' 
+TEMPLATE_DIRS = (
+    '/path/to/djangit/templates',
+)
+

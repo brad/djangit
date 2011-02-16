@@ -1,0 +1,14 @@
+import os
+import sys
+
+sys.path = ['/path/to/djangit', '/path/to/python2.6/'] + sys.path
+from django.core.handlers.wsgi import WSGIHandler
+
+sys.stdout = sys.stderr
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'djangit.settings'
+application = WSGIHandler()
+
+# This causes apache/WSGI to auto-reload django whenever a python file changes.
+import djangit.monitor
+djangit.monitor.start(interval=1.0)

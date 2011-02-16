@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset=utf-8>
+		<title>{% block title %}Djangit Release System{% endblock %}</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		
+		<!-- 52Framework JS/CSS -->
+		<script src="{{ STATIC_URL }}js/lib/html5.js"></script><!-- this is the javascript allowing html5 to run in older browsers -->
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/lib/reset.css" media="screen" title="html5doctor.com Reset Stylesheet" />
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/lib/general.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/lib/grid.css" media="screen" />
+		
+		<!-- Djangit JS/CSS -->
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/djangit.css" media="screen" />
+		
+		<!-- Begin extra head -->
+		{% block extra_head %}{% endblock %}
+		<!-- End extra head -->
+	</head>
+	<body>
+		<div class="row">
+			<header>
+				<div class="logo left">Djangit</div>
+				<div class="statement right">A Git release system built with Django</div>
+			</header>
+			<div class="clear"></div>
+			<aside class="col_4 col">
+				<h3>Actions</h3>
+				<div class="roundedBox">
+					<a href="beta/">Make a Beta</a>
+					<div class="clear"></div>
+					<a href="release/">Make a Release</a>
+				</div>
+				<!-- Begin extra sidebar -->
+				{% block extra_sidebar %}{% endblock %}
+				<!-- End extra sidebar -->
+				<div class="width_4 sideBadge">
+					<a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangomade124x25.gif" border="0" alt="Made with Django." title="Made with Django." /></a>
+				</div>
+				<div class="width_4 sideBadge">
+					<a href="http://www.w3.org/html/logo/">
+						<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+					</a>
+				</div>
+			</aside>
+			<!-- Begin content -->
+			{% block content %}{% endblock %}
+			<!-- End content --> 
+		</div><!-- end wrap -->
+		<footer class="row">
+			<div class="col_8 col align_left">
+				get the <a href="http://github.com/brad/djangit">source</a>
+			</div>
+			<div class="col_8 col align_right">
+				Found a bug? Have a feature request? Report it <a href="https://github.com/brad/djangit/issues">here</a>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+p, h1, h2 li, div, select, input, textarea {
+	font-family: 'Georgia';
+}
+
+p, li, div {
+	font-size: 1.2em;
+}
+
+header {
+	height: 100px;
+	position: relative;
+	margin-bottom: 50px;
+	padding: 0 20px;
+	background-color: #AFBB9F;
+	border-bottom-right-radius: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+}
+
+header .logo {
+	font-family: 'Verdana';
+	font-size: 3.5em;
+	height: 52px;
+	padding-top: 28px;
+	font-weight: 700;
+	color: #000;
+}
+
+header .statement {
+	width: 40%;
+	text-align: right;
+	padding-top: 30px;
+}
+
+div.sideBadge {
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+div.roundedBox {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 20px 25px 20px;
+	margin: 0 0 20px 0;
+	border: 1px solid #CCC;
+}
+
+div.roundedBox p {
+	font-size: 1em;
+}
+
+article {
+	margin: 0 0 20px;
+}
+		
+footer {
+	font-size: .8em;
+	margin-bottom: 20px !important;
+} 

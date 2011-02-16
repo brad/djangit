@@ -1,0 +1,5 @@
+local_settings.py
+local.wsgi
+*.pyc
+.project
+.pydevproject

@@ -20,7 +20,7 @@ WSGIPythonPath /path/to/django/projects/:/usr/lib/python2.6
 WSGIScriptAlias /djangit /path/to/djangit/local.wsgi
 
 Make a symbolic link to your static files:
-sudo ln -s /path/to/djangit/static /var/www/djangit_static
+$ sudo ln -s /path/to/djangit/static /var/www/djangit_static
 
 Setup a key pair for accessing the server via ssh with no password
 

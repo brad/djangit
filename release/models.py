@@ -11,10 +11,10 @@ class Repo(models.Model):
         return self.repo
     
 class Branch(models.Model):
-    TYPE_CHOICES = (
+    TYPE_CHOICES = ( 
         ('B', 'Beta'),
         ('R', 'Release'),
-    )
+    ) 
     server = models.ForeignKey(Server)
     repo = models.ForeignKey(Repo)
     type = models.CharField(max_length=1, choices=TYPE_CHOICES)
@@ -23,7 +23,10 @@ class Branch(models.Model):
     path = models.CharField(max_length=200)
     url = models.URLField()
     def __unicode__(self):
-        return self.type + ' - ' + self.repo
+	if self.type == 'B':
+            return 'Beta - ' + str(self.repo)
+        else:
+            return 'Release - ' + str(self.repo)
 
 class Log(models.Model):
     created = models.DateTimeField(auto_now_add=True)

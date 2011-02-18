@@ -3,7 +3,10 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'', 'djangit.views.index'),
-
     (r'^admin/', include(admin.site.urls)),
+    (r'^beta/', 'djangit.views.beta'),
+    (r'^beta/(?P<beta_id>\d+)/$', 'djangit.views.beta'),
+    (r'^release/', 'djangit.views.release'),
+    (r'^release/(?P<release_id>\d+)/$', 'djangit.views.release'),
+    (r'', 'djangit.views.index'),
 )

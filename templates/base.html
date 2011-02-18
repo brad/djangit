@@ -29,9 +29,9 @@
 			<aside class="col_4 col">
 				<h3>Actions</h3>
 				<div class="roundedBox">
-					<a href="beta/">Make a Beta</a>
+					<a href="{% url djangit.views.beta %}">Make a Beta</a>
 					<div class="clear"></div>
-					<a href="release/">Make a Release</a>
+					<a href="{% url djangit.views.release %}">Make a Release</a>
 				</div>
 				<!-- Begin extra sidebar -->
 				{% block extra_sidebar %}{% endblock %}

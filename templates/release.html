@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Releases</h1>
+	{% for release in releases %}
+		<a href="{% url djangit.views.release release.id %}">{{ release }}</a>
+	{% endfor %}
+{% endblock %}

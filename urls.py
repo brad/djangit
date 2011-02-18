@@ -4,9 +4,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
-    (r'^beta/', 'djangit.views.beta'),
+    (r'^beta/$', 'djangit.views.beta'),
     (r'^beta/(?P<beta_id>\d+)/$', 'djangit.views.beta'),
-    (r'^release/', 'djangit.views.release'),
+    (r'^release/$', 'djangit.views.release'),
     (r'^release/(?P<release_id>\d+)/$', 'djangit.views.release'),
     (r'', 'djangit.views.index'),
 )

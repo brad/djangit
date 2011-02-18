@@ -5,4 +5,9 @@
 	{% for beta in betas %}
 		<a href="{% url djangit.views.beta beta.id %}">{{ beta }}</a>
 	{% endfor %}
+	{% if output %}
+		<h1>Results</h1>
+		<pre>{{ output }}</pre>
+		Check the results <a href="{{ branch.url }}">here</a>
+	{% endif %}
 {% endblock %}

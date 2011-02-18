@@ -5,4 +5,9 @@
 	{% for release in releases %}
 		<a href="{% url djangit.views.release release.id %}">{{ release }}</a>
 	{% endfor %}
+	{% if output %}
+		<h1>Results</h1>
+		<pre>{{ output }}</pre>
+		Check the results <a href="{{ branch.url }}">here</a>
+	{% endif %}
 {% endblock %}

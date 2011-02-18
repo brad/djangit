@@ -1,14 +1,16 @@
 from django.db import models
 
 class Server(models.Model):
+    user = models.CharField(max_length=50)
     domain = models.CharField(max_length=200)
     def __unicode__(self):
         return self.domain
 
 class Repo(models.Model):
+    project_name = models.CharField(max_length=50)
     repo = models.CharField(max_length=200)
     def __unicode__(self):
-        return self.repo
+        return self.project_name
     
 class Branch(models.Model):
     TYPE_CHOICES = ( 

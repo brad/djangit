@@ -3,7 +3,7 @@ Djangit
 
 Djangit is a release system built from Django for projects using git as source control.
 
-This is a scratch-my-own-itch project.  I plan on developing it to the point of satisfying my own needs and after that I will be happy to maintain it by fixing bugs and accepting patches, but I will not be implementing new features unless asked really nicely or paid.
+This is a scratch-my-own-itch project.  I plan on developing it to the point of satisfying my own needs and after that I will be happy to maintain it by fixing small bugs and accepting patches, but I will not be implementing new features unless asked really nicely or paid. ;)
 
 USE
 ===
@@ -24,8 +24,6 @@ sudo ln -s /path/to/djangit/static /var/www/djangit_static
 
 Setup a key pair for accessing the server via ssh with no password
 
-TODO
-====
-That's as far as I've got.  It will be very simple.  Go to /admin and add projects: server, git repo path, git source branch, git target branch, project branch path, project branch url
+Go to /admin and add git branches.  There are two types of branches: beta and release.  The source and target of the Branch object refer the source and target git branch for the release. 
 
-Djangit will ssh to the server and git merge from the specified development branch to the specified branch, then git pull into the git project branch.  
+Djangit will ssh to the server and git merge from the specified source branch to the specified target branch, then git pull into the git project branch.  

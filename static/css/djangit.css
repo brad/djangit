@@ -48,6 +48,13 @@ div.roundedBox p {
 	font-size: 1em;
 }
 
+#content {
+	display: inline-block;
+}
+
+.marginRight20 {
+	margin-right: 20px;
+}
 article {
 	margin: 0 0 20px;
 }

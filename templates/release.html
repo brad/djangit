@@ -2,12 +2,14 @@
 
 {% block content %}
 	<h1>Releases</h1>
-	{% for release in releases %}
-		<a href="{% url djangit.views.release release.id %}">{{ release }}</a>
-	{% endfor %}
+	<p>
+		{% for release in releases %}
+			<a href="{% url djangit.views.release release.id %}" class="marginRight20">{{ release.repo.project_name }}</a>
+		{% endfor %}
+	</p>
 	{% if output %}
 		<h1>Results</h1>
 		<pre>{{ output }}</pre>
-		Check the results <a href="{{ branch.url }}">here</a>
+		<p>Check the results <a href="{{ branch.url }}">here</a></p>
 	{% endif %}
 {% endblock %}

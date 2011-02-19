@@ -2,12 +2,14 @@
 
 {% block content %}
 	<h1>Betas</h1>
-	{% for beta in betas %}
-		<a href="{% url djangit.views.beta beta.id %}">{{ beta }}</a>
-	{% endfor %}
+	<p>
+                {% for beta in betas %}
+                        <a href="{% url djangit.views.beta beta.id %}" class="marginRight20">{{ beta.repo.project_name }}</a>
+                {% endfor %}
+        </p>
 	{% if output %}
 		<h1>Results</h1>
 		<pre>{{ output }}</pre>
-		Check the results <a href="{{ branch.url }}">here</a>
+		<p>Check the results <a href="{{ branch.url }}">here</a></p>
 	{% endif %}
 {% endblock %}

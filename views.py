@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.template import RequestContext, loader
 from django.http import HttpResponse
 from djangit import settings
@@ -5,6 +6,7 @@ from djangit.release.models import Branch
 
 from subprocess import Popen, PIPE
 
+@login_required
 def index(request):
     t = loader.get_template('index.html')
     c = RequestContext(request, {
@@ -12,6 +14,7 @@ def index(request):
     } )
     return HttpResponse(t.render(c))
 
+@login_required
 def beta(request, beta_id = None):
     betas = Branch.objects.filter(type='B')
     t = loader.get_template('beta.html')
@@ -35,6 +38,7 @@ def beta(request, beta_id = None):
     c = RequestContext(request, context_dict)
     return HttpResponse(t.render(c))
 
+@login_required
 def release(request, release_id = None):
     releases = Branch.objects.filter(type='R')
     t = loader.get_template('release.html')

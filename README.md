@@ -9,18 +9,23 @@ USE
 ===
 
 Get the source.
-
+```bash
 $ cp local_settings.py.example local_settings.py
 $ cp local.wsgi.example local.wsgi
+```
 
 Tailor these files to your own needs.  The sys.path line is only necessary if you have django projects stored in different locations.  If they are all in the same folder, you can just add a line to the Apache config, as shown below.
 
 Add lines like this to apache conf:
+```
 WSGIPythonPath /path/to/django/projects/:/usr/lib/python2.6
 WSGIScriptAlias /djangit /path/to/djangit/local.wsgi
+```
 
 Make a symbolic link to your static files:
+```bash
 $ sudo ln -s /path/to/djangit/static /var/www/djangit_static
+```
 
 Setup a key pair for accessing the server via ssh with no password
 
